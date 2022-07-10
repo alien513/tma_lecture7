@@ -1,0 +1,14 @@
+<button mat-button type="button" (click)="onSelectAll()">Select all</button>
+<button mat-button type="button" (click)="onDelete()" [disabled]="selectedAny">Delete</button>
+
+<mat-form-field [floatLabel]="'never'">
+  <mat-label>Sorting by lastname</mat-label>
+  <mat-select [(ngModel)]="selectedSorting" (selectionChange)="onSort(selectedSorting)">
+    <mat-option value="ASC">Ascending</mat-option>
+    <mat-option value="DESC">Descending</mat-option>
+  </mat-select>
+</mat-form-field>
+&nbsp;&nbsp;&nbsp;
+<mat-form-field [floatLabel]="'never'" class="searchbox">
+  <input matInput type="search" placeholder="Search users" [(ngModel)]="searchUser" (input)="onSearch()"/>
+</mat-form-field>

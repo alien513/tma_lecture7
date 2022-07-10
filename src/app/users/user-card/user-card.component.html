@@ -1,0 +1,8 @@
+<mat-card class="user-card">
+    <mat-checkbox [checked]="user.select" (change)="onSelect(user)"></mat-checkbox>
+    <mat-card-content class="user-card__info">
+      <p>{{ user.name | uppercase }}</p>
+      <p>{{ user.email }}</p>
+      <p>{{ user.phone }}</p>
+    </mat-card-content>
+</mat-card>
